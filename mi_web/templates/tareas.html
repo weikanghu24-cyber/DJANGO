@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tareas - {{ lista.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="card">
+        <a href="{% url 'list_index' %}" style="text-decoration:none; font-size:0.9rem; color:var(--primary);">← Volver</a>
+        <h1>{{ lista.name }}</h1>
+
+        <form method="POST" class="input-group">
+            {% csrf_token %}
+            <input type="text" name="title" placeholder="¿Qué tareas hay que hacer?" required>
+            <button type="submit">Añadir</button>
+        </form>
+
+        <ul class="item-list">
+            {% for t in tareas %}
+            <li class="item">
+                <div style="display:flex; align-items:center;">
+                    <a href="{% url 'task_toggle' lista.id t.id %}" class="btn-toggle">
+                        {% if t.completed %} ✅ {% else %} ⭕ {% endif %}
+                    </a>
+                    <span class="{% if t.completed %}completed{% endif %}">{{ t.title }}</span>
+                </div>
+                <a href="{% url 'task_delete' lista.id t.id %}" class="btn-del">Eliminar</a>
+            </li>
+            {% empty %}
+            <p style="text-align:center; color:#6b7280;">Esta lista está vacía.</p>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

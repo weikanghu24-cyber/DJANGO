@@ -1,0 +1,70 @@
+
+:root {
+    --primary: #4f46e5;   
+    --success: #10b981;   
+    --danger: #ef4444;    
+    --bg: #f9fafb;        
+    --text: #1f2937;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 0em 10em;
+    margin: 5em;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+h1 { font-weight: 500; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; }
+
+/* Formularios */
+.input-group { display: flex; gap: 10px; margin-bottom: 2rem; }
+input[type="text"] {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+input[type="text"]:focus { border-color: var(--primary); }
+
+button {
+    background: var(--primary);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+button:hover { opacity: 0.9; }
+
+/* Listados */
+.item-list { list-style: none; padding: 0; }
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #f3f4f6;
+}
+.item:hover { background: #fdfdfd; }
+
+.item-link { text-decoration: none; color: var(--text); font-weight: 400; }
+.btn-del { color: var(--danger); text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+
+/* Tareas completadas */
+.completed { text-decoration: line-through; color: #9ca3af; }
+.btn-toggle { text-decoration: none; font-size: 1.2rem; margin-right: 12px; }
