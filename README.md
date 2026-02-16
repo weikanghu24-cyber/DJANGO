@@ -28,13 +28,6 @@ Tareas
 - `DELETE /lists/<id>/tasks/<id>/`: Eliminar una tarea.
 
 Tecnologías utilizadas
-
 - Backend: Python, Django.
 - Frontend: HTML5, CSS3.
 
-## ⚙️ Instalación y Configuración
-
-1. **Clonar el repositorio**:
-   ```bash
-   git clone [https://github.com/tu-usuario/nombre-repo.git](https://github.com/tu-usuario/nombre-repo.git)
-   cd nombre-repo
