@@ -23,7 +23,6 @@
                     {{ lista.name }}
                 </a>
                 <a href="{% url 'list_delete' lista.id %}" class="btn-del"><br>Borrar</a>
-                <!-- onclick="return confirm('¿Borrar lista?')"-->
             </li>
             {% empty %}
             <p style="text-align:center; color:#6b7280;">No hay listas creadas aún.</p>

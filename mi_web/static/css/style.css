@@ -27,7 +27,6 @@ body {
 
 h1 { font-weight: 500; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; }
 
-/* Formularios */
 .input-group { display: flex; gap: 10px; margin-bottom: 2rem; }
 input[type="text"] {
     flex: 1;
@@ -51,7 +50,6 @@ button {
 }
 button:hover { opacity: 0.9; }
 
-/* Listados */
 .item-list { list-style: none; padding: 0; }
 .item {
     display: flex;
@@ -65,6 +63,5 @@ button:hover { opacity: 0.9; }
 .item-link { text-decoration: none; color: var(--text); font-weight: 400; }
 .btn-del { color: var(--danger); text-decoration: none; font-size: 0.85rem; font-weight: 600; }
 
-/* Tareas completadas */
 .completed { text-decoration: line-through; color: #9ca3af; }
 .btn-toggle { text-decoration: none; font-size: 1.2rem; margin-right: 12px; }
